@@ -14,7 +14,7 @@ public class Ejercicios {
     /*Maximo Comun Divisor mcd con algoritmo de Euclides Clase 2
     a=412 ; b=184;
      */
-    public static int mcd(int a , int b){
+    /*public static int mcd(int a , int b){
         int mcd;
         if (a==b){
         mcd= b;
@@ -29,4 +29,17 @@ public class Ejercicios {
         }
         return mcd;
     }
+    */
+    //SUMA DE ELEMENTOS DE UN VECTOR
+    public static int sumavector(int[]vector,int indice){
+        int suma;
+        if(indice==vector.length -1){
+            suma = vector[indice];
+        }else{
+            suma = vector[indice]+sumavector(vector,indice+1);
+
+        }
+        return suma;
+    }
+
 }
