@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class Ejercicios {
     //Recursividad Clase 1
     /*public static int factorial(int n){
@@ -40,6 +42,26 @@ public class Ejercicios {
 
         }
         return suma;
+        //Invertir cadena con recursividad
+    }
+    public static String InvertirPalabra(String palabra, int longitud){
+        if( longitud==0){
+            return palabra.charAt(longitud)+"";
+
+
+        }else
+            return palabra.charAt(longitud)+InvertirPalabra(palabra,longitud -1);
+
+    }
+    public static void main(String[]args){
+        Scanner teclado = new Scanner(System.in);
+        String palabra;
+        int longitud;
+        System.out.println("ingrese una palabra");
+        palabra=teclado.next();
+        longitud = palabra.length();
+        String palabra_invertida = InvertirPalabra(palabra,longitud-1);
+        System.out.println("La palabra invertida es "+palabra_invertida);
     }
 
 }
