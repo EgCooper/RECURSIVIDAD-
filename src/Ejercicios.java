@@ -63,7 +63,7 @@ public class Ejercicios {
         String palabra_invertida = InvertirPalabra(palabra,longitud-1);
         System.out.println("La palabra invertida es "+palabra_invertida);
     }*/
-    private static int compararVectores(int[]vector1,int[]vector2,int indice){
+    /*private static int compararVectores(int[]vector1,int[]vector2,int indice){
         int sumaDiferencias;
         if (indice==vector1.length-1){
             sumaDiferencias =Math.abs(vector1[indice]-vector2[indice]);
@@ -74,6 +74,23 @@ public class Ejercicios {
     }
     public static boolean compararVectores(int[]vector1,int[]vector2){
         return compararVectores(vector1,vector2, 0)==0;
+    }*/
+
+
+    //Comparando dos vectores con recursividad
+    private static int compararVectores(int[] v1,int[] v2,int indice){
+        int sumaDiferencia;
+        if (indice==v1.length-1){
+            sumaDiferencia=Math.abs(v1[indice]-v2[indice]);
+
+        }else {
+            sumaDiferencia=Math.abs(v1[indice]-v2[indice])+compararVectores(v1,v2,indice+1);
+
+        }
+        return sumaDiferencia;
+    }
+    public static boolean compararVectores(int[] v1,int[] v2){
+        return compararVectores(v1,v2,0)==0;
     }
 
 }
