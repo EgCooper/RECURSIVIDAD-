@@ -78,7 +78,7 @@ public class Ejercicios {
 
 
     //Comparando dos vectores con recursividad
-    private static int compararVectores(int[] v1,int[] v2,int indice){
+    /*private static int compararVectores(int[] v1,int[] v2,int indice){
         int sumaDiferencia;
         if (indice==v1.length-1){
             sumaDiferencia=Math.abs(v1[indice]-v2[indice]);
@@ -91,6 +91,29 @@ public class Ejercicios {
     }
     public static boolean compararVectores(int[] v1,int[] v2){
         return compararVectores(v1,v2,0)==0;
+    }*/
+    //Serie Fibonacci Diseñar e implementar un método recursivo para calcular el enésimo término de
+    //la sucesión.
+    public static void main(String[]args){
+        //para que el usuario pueda insertar un numero que se guarde utilizamos scanner
+        Scanner teclado = new Scanner(System.in);
+        //la sucesion de la serie fibonnacci esta definida por los siguientes valores f(a)=0 y f1(b)=1
+        int a = 0, b = 1, c, n,d;
+        //Usamos un sout para pedir al usuario que ingrese el numero de cual requiere calcular la sucesion
+        System.out.println("Ingrese un numero para calcular la sucesion:" );
+        //llamamos a la variable donde se insertara el numero ingresado
+        n = teclado.nextInt();
+        //utilizamos el ciclo fori para realizar la operacion
+        for (int i = 0; i < n; i++) {
+            System.out.println(a);
+            c = a+b;
+            a = b;
+            b = c;
+
+
+        }
+
     }
+
 
 }

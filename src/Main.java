@@ -4,8 +4,8 @@ public class Main {
         //int[] vector = {2,4,2};
         //System.out.println(Ejercicios.sumavector(vector,0));
 
-        int[]v1={2,9,2};
-        int[]v2={2,9,2};
-        System.out.println(Ejercicios.compararVectores(v1,v2));
+        //int[]v1={2,9,2};
+        //int[]v2={2,9,2};
+        //System.out.println(Ejercicios.compararVectores(v1,v2));
     }
 }
