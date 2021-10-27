@@ -94,6 +94,7 @@ public class Ejercicios {
     }*/
     //Serie Fibonacci Diseñar e implementar un método recursivo para calcular el enésimo término de
     //la sucesión.
+    /*
     public static void main(String[]args){
         //para que el usuario pueda insertar un numero que se guarde utilizamos scanner
         Scanner teclado = new Scanner(System.in);
@@ -112,6 +113,26 @@ public class Ejercicios {
 
 
         }
+
+    }*/
+    //MAXIMO VECTOR CON RECURSIVIDAD
+    private static int MaximoVector(int[]vector, int indice, int maximo){
+        if (indice== vector.length-1){
+            if (vector[indice]>maximo) {
+                maximo = vector[indice];
+            }
+        }else{
+            if (vector[indice]>maximo){
+                maximo=vector[indice];
+
+            }
+            maximo=MaximoVector(vector,indice + 1,maximo);
+        }
+            return maximo;
+    }
+        public static int MaximoVector(int[]vector){
+        return MaximoVector(vector,0,0);
+
 
     }
 
