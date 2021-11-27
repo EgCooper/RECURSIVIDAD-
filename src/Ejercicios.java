@@ -116,6 +116,7 @@ public class Ejercicios {
 
     }*/
     //MAXIMO VECTOR CON RECURSIVIDAD
+    /*
     private static int MaximoVector(int[]vector, int indice, int maximo){
         if (indice== vector.length-1){
             if (vector[indice]>maximo) {
@@ -133,6 +134,29 @@ public class Ejercicios {
         public static int MaximoVector(int[]vector){
         return MaximoVector(vector,0,0);
 
+
+    }
+    */
+    //INDICE VECTOR
+    public static int indiceVector(int[]vector,int indice){
+        int contador = 0;
+        //casobase
+        if (indice == vector.length - 1){
+            if (indice == vector[indice]){
+                contador++;
+            }
+
+        }else {//llamadarecursiva
+            if (indice == vector[indice]){
+                contador++;
+            }
+            contador = contador +indiceVector(vector,indice + 1);
+        }
+        return contador;
+    }
+    //metodauxiliar
+    public static boolean indiceVector(int[] vector){
+        return indiceVector(vector,0)>0;
 
     }
 
